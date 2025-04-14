@@ -1,2 +1,2 @@
 # IT112
-IT112 repo
+Repository for homework files/projects for IT112
