@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import random
 
 app = Flask(__name__)
 
@@ -22,9 +23,9 @@ def fortune():
         color = request.form['color']
         number = request.form['number']
 
-        userFortune = getFortune(name, color, number)
+        userFortune, luckyNumber = getFortune(name, color, number)
 
-        return render_template('fortuneTemplate.html', fortune=userFortune)
+        return render_template('fortuneTemplate.html', fortune=userFortune, luckyNumber=luckyNumber)
     else:
         return showFortunePage()
 
@@ -50,4 +51,5 @@ def getFortune(name, color, number):
     elif color == "blue":
         fortune += " will be inspired and try something new."
 
-    return fortune
+    luckyNumber = random.randint(1, 100)
+    return (fortune, luckyNumber)
