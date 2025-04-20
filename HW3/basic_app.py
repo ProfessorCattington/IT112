@@ -53,3 +53,6 @@ def getFortune(name, color, number):
 
     luckyNumber = random.randint(1, 100)
     return (fortune, luckyNumber)
+
+if __name__ == '__main__':
+    app.run(debug=True)
