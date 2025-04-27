@@ -10,3 +10,4 @@ venv.bak/
 # Cache
 *.pyc
 __pycache__/
+instance/
