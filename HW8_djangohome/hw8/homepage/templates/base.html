@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>HW8 home page</title>
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        </head>
+        <body>
+
+            {% if user_name %}
+                <h1>Hello, {{ user_name }}!</h1>
+            {% else %}
+                <h1>Hello and welcome!</h1>
+            {% endif %}
+
+            <img src="{% static 'img/seal.jpg' %}" alt="A seal">
+
+            <p style="color: white;">Here is a seal pup.</p>
+
+        </body>
+    </html>
